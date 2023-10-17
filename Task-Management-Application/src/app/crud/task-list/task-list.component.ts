@@ -1,11 +1,14 @@
 import { Component, OnInit, ViewChild} from '@angular/core';
 import { TaskService } from 'src/app/services/task.service';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatSort, MatSortModule} from '@angular/material/sort';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { Router } from '@angular/router';
+
+
 
 
 @Component({
@@ -59,5 +62,10 @@ export class TaskListComponent implements OnInit {
   }
   home(){
     this._router.navigate(['']);
+  }
+  onDrop(event: CdkDragDrop<any[]>) {
+    const data = this.dataSource.data;
+    moveItemInArray(data, event.previousIndex, event.currentIndex);
+    this.dataSource.data = [...data];
   }
 }
