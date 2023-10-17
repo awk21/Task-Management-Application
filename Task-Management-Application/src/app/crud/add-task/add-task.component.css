@@ -1,0 +1,11 @@
+.card{
+    top: 40%;
+    border: none;
+}
+.example-card{
+    text-align: center;
+}
+.homeContaintButton{
+    text-align: end;
+
+}

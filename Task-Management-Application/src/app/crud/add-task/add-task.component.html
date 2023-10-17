@@ -1,0 +1,36 @@
+<div class="card">
+    <div class="container">
+        <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+            <mat-card class="example-card">
+                <div class="homeContaintButton">
+                    <button mat-icon-button color="primary" (click)="home()">
+                        <mat-icon>home</mat-icon>
+                    </button>
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Title</mat-label>
+                            <input matInput placeholder="Enter then Title" formControlName="title">
+                            <mat-hint>Enter the Title</mat-hint>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-6">
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Description</mat-label>
+                            <input matInput placeholder="Enter the Description" formControlName="description">
+                            <mat-hint>Enter the Description</mat-hint>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-12">
+                        <button mat-raised-button color="primary" type="submit">Submit</button>
+                    </div>
+
+                </div>
+            </mat-card>
+        </form>
+
+    </div>
+</div>
