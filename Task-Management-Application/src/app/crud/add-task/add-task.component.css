@@ -1,5 +1,5 @@
 .card{
-    top: 40%;
+    top: 16%;
     border: none;
 }
 .example-card{
@@ -7,5 +7,12 @@
 }
 .homeContaintButton{
     text-align: end;
+
+}
+.example-full-width{
+    padding-top: 40px;
+}
+.statusContent{
+    padding-top: 40px;
 
 }
