@@ -38,7 +38,6 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatFormFieldModule,
     MatCardModule,
     MatButtonModule,
-    ReactiveFormsModule,
     HttpClientModule,
     MatTableModule,
     MatPaginatorModule,
@@ -46,7 +45,8 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatIconModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSelectModule
+    MatSelectModule,
+    ReactiveFormsModule
   ]
 })
 export class CrudModule { }

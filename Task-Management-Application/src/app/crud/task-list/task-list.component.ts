@@ -17,7 +17,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./task-list.component.css']
 })
 export class TaskListComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'title', 'description', 'dueDate','status','action'];
+  displayedColumns: string[] = ['id', 'title', 'description','startDate', 'dueDate','status','action'];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

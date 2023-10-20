@@ -14,6 +14,7 @@
                             <mat-label>Title</mat-label>
                             <input matInput placeholder="Enter then Title" formControlName="title">
                             <mat-hint>Enter the Title</mat-hint>
+                            <mat-error *ngIf="taskForm.get('title')?.hasError('required')">Title is required</mat-error>
                         </mat-form-field>
                     </div>
                     <div class="col-sm-6">
@@ -22,6 +23,45 @@
                             <mat-label>Description</mat-label>
                             <input matInput placeholder="Enter the Description" formControlName="description">
                             <mat-hint>Enter the Description</mat-hint>
+                            <mat-error *ngIf="taskForm.get('description')?.hasError('required')">Description is required</mat-error>
+                        </mat-form-field>
+                    </div>
+                    
+                    <div class="col-sm-6">
+
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Choose a start date</mat-label>
+                            <input matInput [matDatepicker]="picker" formControlName="startDate" >
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker touchUi #picker></mat-datepicker>
+                            <mat-error *ngIf="taskForm.get('startDate')?.hasError('required')">Start Date is required</mat-error>
+                            <mat-error *ngIf="taskForm.get('startDate')?.hasError('invalidDate')">Invalid Date</mat-error>
+
+                          </mat-form-field>
+                    </div>
+                    <div class="col-sm-6">
+
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Choose a due date</mat-label>
+                            <input matInput [matDatepicker]="picker1" formControlName="dueDate"  >
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+                            <mat-datepicker touchUi #picker1></mat-datepicker>
+                            <mat-error *ngIf="taskForm.get('dueDate')?.hasError('required')">Due Date is required</mat-error>
+                            <mat-error *ngIf="taskForm.get('dueDate')?.hasError('dateComparison')">Due Date cannot be less than Start Date</mat-error>
+                          
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-6">
+                        <mat-form-field class="statusContent">
+                            <mat-label>Status</mat-label>
+                            <mat-select formControlName="status">
+                                <mat-option *ngFor="let status of statuses" [value]="status.value">
+                                    {{status.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                            <mat-error *ngIf="taskForm.get('status')?.hasError('required')">Status is required</mat-error>
                         </mat-form-field>
                     </div>
                     <div class="col-sm-12">
