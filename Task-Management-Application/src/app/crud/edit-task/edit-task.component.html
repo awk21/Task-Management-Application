@@ -51,13 +51,8 @@
                             <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
                             <mat-datepicker #picker1></mat-datepicker>
                             <mat-error *ngIf="editTaskForm.get('dueDate')?.hasError('required')">due Date is required</mat-error>
-                            <mat-error *ngIf="editTaskForm.hasError('dateComparison')">Due Date cannot be less than Start Date</mat-error>
-
-
-
-
-
                         </mat-form-field>
+                        <mat-error *ngIf="errorMessage" class="errorMessage">{{ errorMessage }}</mat-error>
                     </div>
                     <div class="col-sm-6">
                         <mat-form-field class="statusContent">
