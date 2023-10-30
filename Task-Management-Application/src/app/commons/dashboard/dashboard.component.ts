@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 export class DashboardComponent implements OnInit {
   task = "Add Task"
   taskList="Task List"
+  login="Login"
+  signUp="Sign Up"
   constructor(private route: Router) { }
 
   ngOnInit(): void {
