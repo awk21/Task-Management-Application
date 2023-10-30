@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './commons/dashboard/dashboard.component';
-import { AddTaskComponent } from './crud/add-task/add-task.component';
 import { TaskListComponent } from './crud/task-list/task-list.component';
 import { EditTaskComponent } from './crud/edit-task/edit-task.component';
+import { AddTaskComponent } from './crud/add-task/add-task.component';
 
 
 const routes: Routes = [
@@ -12,6 +12,11 @@ const routes: Routes = [
     loadChildren:()=>import('./admin/admin.module')
     .then(mod=>mod.AdminModule)
   },
+  // {
+  //   path:'admin/dashboard',
+  //   loadChildren:()=>import('./admin-dashboard/admin-dashboard.module')
+  //   .then(mod=>mod.AdminDashboardModule)
+  // },
   {
   path:'',
   component: DashboardComponent,

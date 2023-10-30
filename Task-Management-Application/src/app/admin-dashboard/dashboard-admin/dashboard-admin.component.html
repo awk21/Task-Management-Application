@@ -1,0 +1,22 @@
+<div class="card">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <mat-card class="example-card">
+                    <mat-card-title-group>
+                        <mat-card-title class="titleContent" [routerLink]="['/add-task']" >{{task}}
+                        </mat-card-title>
+                    </mat-card-title-group>
+                </mat-card>
+            </div>
+            <div class="col-sm-4">
+                <mat-card class="example-card">
+                    <mat-card-title-group>
+                        <mat-card-title class="titleContent" [routerLink]="['/task-list']">{{taskList}}
+                        </mat-card-title>
+                    </mat-card-title-group>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

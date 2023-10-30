@@ -17,6 +17,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { AdminModule } from './admin/admin.module';
 
 
 
@@ -43,7 +44,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatNativeDateModule
 
   ],
-  providers: [CommonsModule,CrudModule],
+  providers: [CommonsModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

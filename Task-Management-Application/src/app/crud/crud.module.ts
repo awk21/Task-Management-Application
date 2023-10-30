@@ -18,6 +18,8 @@ import { EditTaskComponent } from './edit-task/edit-task.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 
 import {MatNativeDateModule} from '@angular/material/core';
+import { RouterModule } from '@angular/router';
+import { CrudRoutingModule } from './crud-routing.module';
 
 
 
@@ -33,6 +35,7 @@ import {MatNativeDateModule} from '@angular/material/core';
   imports: [
     CommonModule,
     AppRoutingModule,
+    CrudRoutingModule,
     MatSelectModule,
     MatInputModule,
     MatFormFieldModule,
@@ -46,7 +49,8 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule,
   ]
 })
 export class CrudModule { }

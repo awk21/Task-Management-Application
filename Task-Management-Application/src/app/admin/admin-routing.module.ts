@@ -6,6 +6,11 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path:'dashboardAdmin',
+    loadChildren:()=>import('../admin-dashboard/admin-dashboard.module')
+    .then(mod=>mod.AdminDashboardModule)
   }
 ];
 

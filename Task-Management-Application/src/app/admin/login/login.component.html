@@ -1,4 +1,4 @@
-<!-- <div class="card">
+<div class="card">
     <div class="container">
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <mat-card class="example-card">
@@ -11,19 +11,19 @@
 
                     <div class="col-sm-6">
                         <mat-form-field appearance="outline">
-                            <mat-label>Title</mat-label>
+                            <mat-label>User Id</mat-label>
                             <input matInput placeholder="Enter then user Id" formControlName="userId">
-                            <mat-hint>Enter the Title</mat-hint>
-                            <mat-error *ngIf="loginForm.get('title')?.hasError('required')">userId is required</mat-error>
+                            <mat-hint>Enter the userId</mat-hint>
+                            <mat-error *ngIf="loginForm.get('userId')?.hasError('required')">userId is required</mat-error>
                         </mat-form-field>
                     </div>
                     <div class="col-sm-6">
 
                         <mat-form-field appearance="outline">
-                            <mat-label>Description</mat-label>
-                            <input matInput placeholder="Enter the Password" formControlName="password">
-                            <mat-hint>Enter the Description</mat-hint>
-                            <mat-error *ngIf="loginForm.get('description')?.hasError('required')">password is required</mat-error>
+                            <mat-label>Password</mat-label>
+                            <input matInput  type="password" placeholder="Enter the Password" formControlName="password">
+                            <mat-hint>Enter the Password</mat-hint>
+                            <mat-error *ngIf="loginForm.get('password')?.hasError('required')">password is required</mat-error>
                         </mat-form-field>
                     </div>
                     <div class="col-sm-12">
@@ -35,4 +35,4 @@
         </form>
 
     </div>
-</div> -->
+</div>
